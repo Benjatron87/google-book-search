@@ -13,7 +13,15 @@ class Home extends React.Component {
 
     searchBooks = query => {
         API.search(query)
-            .then(res => this.setState({books: res.data.items}))
+            .then(res => {
+               
+               if(res.data.items){ 
+                this.setState({books: res.data.items})
+               }
+               else{
+                   alert("Not a Valid Search!");
+               }
+            })
             .catch(err => console.log(err))
     }
 
@@ -40,7 +48,7 @@ class Home extends React.Component {
                             <label>Search for a Book!</label>
                             <input onChange={this.handleInputChange} type="text" className="form-control"  placeholder="Search"/>
                         </div>
-                    </form><button className="btn btn-secondary search" onClick={this.submitSearch}>Search</button>
+                    </form><button className="btn search" onClick={this.submitSearch}>Search</button>
                 </div>
 
                 <Wrapper results={"Results:"}>
@@ -49,7 +57,11 @@ class Home extends React.Component {
                             title={book.volumeInfo.title}
                             author={book.volumeInfo.authors}
                             id={book.id}
-                        />
+                            image={book.volumeInfo.imageLinks.thumbnail}
+                            synopsis={book.volumeInfo.description}
+                            button={"Save"}
+                            >
+                        </Card>
                     ))}
                 </Wrapper>
             </div>

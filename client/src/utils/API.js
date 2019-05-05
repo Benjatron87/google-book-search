@@ -21,5 +21,12 @@ export default {
     })
 
     return books;
+  },
+
+  delete: function(id){
+
+    axios.delete("/api/books" + id, {data: {id}});
+
+    return "Deleted";
   }
 };
