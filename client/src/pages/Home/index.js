@@ -32,6 +32,15 @@ class Home extends React.Component {
         });
     };
 
+    exists = (item) => {
+        if(item){
+            return item;
+        }
+        else{
+            return "";
+        }
+    }
+
     submitSearch = (event) => {
         event.preventDefault();
 
@@ -54,12 +63,12 @@ class Home extends React.Component {
                 <Wrapper results={"Results:"}>
                     {this.state.books.map(book => (
                         <Card
-                            title={book.volumeInfo.title}
-                            author={book.volumeInfo.authors}
-                            id={book.id}
-                            image={book.volumeInfo.imageLinks.thumbnail}
-                            synopsis={book.volumeInfo.description}
-                            link={book.volumeInfo.previewLink}
+                            title={this.exists(book.volumeInfo.title)}
+                            author={this.exists(book.volumeInfo.authors)}
+                            id={this.exists(book.id)}
+                            image={this.exists(book.volumeInfo.imageLinks)}
+                            synopsis={this.exists(book.volumeInfo.description)}
+                            link={this.exists(book.volumeInfo.previewLink)}
                             button={"Save"}
                             >
                         </Card>
