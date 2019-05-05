@@ -59,6 +59,7 @@ class Home extends React.Component {
                             id={book.id}
                             image={book.volumeInfo.imageLinks.thumbnail}
                             synopsis={book.volumeInfo.description}
+                            link={book.volumeInfo.previewLink}
                             button={"Save"}
                             >
                         </Card>

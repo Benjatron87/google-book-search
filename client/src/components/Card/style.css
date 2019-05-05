@@ -48,3 +48,12 @@
     font-size: 14px;
     height: 130px;   
 }
+
+.link{
+    color: navy;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: navy;
+  }
