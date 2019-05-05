@@ -1,0 +1,26 @@
+{
+  "name": "google-book-search",
+  "version": "1.0.0",
+  "description": "searches books with Google api",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.5.5",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benjatron87/google-book-search.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benjatron87/google-book-search/issues"
+  },
+  "homepage": "https://github.com/Benjatron87/google-book-search#readme"
+}
