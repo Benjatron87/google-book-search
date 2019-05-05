@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Wrapper from "../../components/Wrapper";
+import Card from "../../components/Card";
+import "./style.css"
 
-function Saved () {
 
+class Saved extends Component {
 
+    state = {
+        book: []
+    }
+
+    render() {
         return (
-            <div>
-                
+            <div className="container">
+                <Wrapper results={"Saved:"}>
+                   
+                </Wrapper>
             </div>
-        );
+        )
+    }
 
 }
 

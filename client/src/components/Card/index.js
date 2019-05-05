@@ -1,11 +1,17 @@
 import React from 'react';
+import './style.css'
 
-function Card () {
+function Card (props) {
 
 
         return (
-            <div>
-                
+            <div className="container">
+                <div className="row book">
+                        {props.title}
+                    <div className="col-10">
+
+                    </div>
+                </div>
             </div>
         );
 

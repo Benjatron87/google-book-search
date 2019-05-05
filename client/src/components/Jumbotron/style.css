@@ -1,5 +1,5 @@
 .title{
-    margin-top: 3%;
+    margin-top: 2%;
     color: navy;
     font-size: 200%;
 }
@@ -10,4 +10,5 @@
     text-shadow: 2px 2px rgb(255, 255, 255);
     padding-left: 30%;
     padding-right: 30%;
+    margin-bottom: 1%;
 }

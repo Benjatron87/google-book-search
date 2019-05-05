@@ -1,0 +1,23 @@
+.wrapper{
+    float: left;
+    background: rgb(233, 233, 233);
+    text-shadow: 2px 2px rgb(255, 255, 255);
+    border: 1px solid navy;
+    height: 100%;
+    width: 88%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+    margin: 6%;
+    margin-top: 3%;
+    margin-bottom: 10%;
+    border-radius: 2px;
+}
+
+.results{
+    margin: 1%;
+    color: navy;
+    font-size: 150%;
+    text-shadow: 2px 2px rgb(255, 255, 255);
+}
