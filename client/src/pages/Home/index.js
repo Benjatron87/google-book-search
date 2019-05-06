@@ -61,15 +61,15 @@ class Home extends React.Component {
                 </div>
 
                 <Wrapper results={"Results:"}>
-                    {this.state.books.map(book => (
+                    {this.state.books.map((book, i) => (
                         <Card
                             title={this.exists(book.volumeInfo.title)}
                             author={this.exists(book.volumeInfo.authors)}
-                            id={this.exists(book.id)}
                             image={this.exists(book.volumeInfo.imageLinks)}
                             synopsis={this.exists(book.volumeInfo.description)}
                             link={this.exists(book.volumeInfo.previewLink)}
                             button={"Save"}
+                            id={i}
                             >
                         </Card>
                     ))}

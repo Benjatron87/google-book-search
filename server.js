@@ -1,16 +1,25 @@
 const express = require("express");
 const path = require("path");
+const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// Serve up static assets (usually on heroku)
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoArticles";
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("*", function(req, res) {
+app.use(bodyParser.urlencoded({ extended: false }))
+
+app.use(bodyParser.json())
+
+mongoose.connect(MONGODB_URI);
+
+require("./routes/apiRoutes")(app);
+
+app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 

@@ -18,9 +18,11 @@ export default {
 
     axios.get("/api/books", function(req, res){
         books.push(req.body);
-    })
 
-    return books;
+        console.log(books);
+
+        return books;
+    })
   },
 
   delete: function(id){
